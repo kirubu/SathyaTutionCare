@@ -43,7 +43,7 @@ header{
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 2rem 7%;
+    padding: 1rem 7%;
     background: var(--gradient);
     box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.3);
 }
@@ -73,14 +73,16 @@ header .navbar ul li a{
     font-size: 1.8rem;
     color: #fff;
 }
+header .navbar ul li a:active{
+    color: rgb(251, 255, 0);
+}
 
-header .navbar ul li a.active,
 header .navbar ul li a:hover{
     text-decoration: none;
     color: rgb(251, 255, 0);
 }
  /* media queries for header */
-@media (max-width:760px) {
+@media (max-width:900px) {
     html{
         font-size: 50%;
     }
@@ -117,7 +119,7 @@ header .navbar ul li a:hover{
         transform: rotate(180deg);
     }
     header .navbar.nav-toggle{
-        top: 6.4rem;
+        top: 5.8rem;
         align-items: center;
         justify-content: center;
     }
@@ -193,6 +195,238 @@ section{
     padding: 1.5rem 0;
 }
 .about .content button{
+    font-size: 1.5rem;   
+}
+/* .classes section style*/
+.classes .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.heading
+{
+    color: #002092;
+    padding: 1rem;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.classes .box-container .box{
+    width: 35rem;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin: 1.5rem;
+}
+
+.classes .box-container .box img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+.classes .box-container .box .content{
+    padding: 1rem;
+}
+.classes .box-container .box .content .stars i{
+    color: #0575e6;
     font-size: 1.5rem;
+    padding: 1rem .1rem;
+}
+.classes .box-container .box .content .title{
+    color: #002092;
+    font-size: 2rem;
+}
+.classes .box-container .box .content .title:hover{
+    text-decoration: underline;
+}
+.classes .box-container .box .content p{
+    padding: 1rem;
+    color: #666;
+    font-size: 1.5rem;
+}
+.classes .box-container .box .content .info
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5rem;
+    border-top: .1rem solid rgba(0, 0, 0, 0.3);
+}
+
+.classes .box-container .box .content .info h3
+{
+    font-size: 1.3rem;
+    padding: 1rem;
+    color: #666;
+}
+.classes .box-container .box .content .info h3 i
+{
+    color: #002092;
+}
+.classes .box-container .box .grade{
+    position: absolute;
+    top: 16rem; right: 1rem;
+    height: 8rem; width: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: #fff;
+    font-size: 3rem;
+}
+.teachers .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.teachers .box-container .box{
+    flex: 1 1 23rem;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+.teachers .box-container .box img{
+    height: 15rem;
+    width: 15rem;
+    margin: .5rem 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.teachers .box-container .box h3{
+    color: #002092;
+    font-size: 2.2rem;
+}
+.teachers .box-container .box span{
+    color: #0575e6;
+    font-size: 1.5rem;
+}
+.teachers .box-container .box p{
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.teachers .box-container .box .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    background: #002092;
+    color: #fff;
+    border-radius: .5rem;
+    margin: .3rem;
+    text-decoration: none;
+}
+.teachers .box-container .box .share a:hover{
+    background: #0575e6;
+}
+.qualities{
+    text-align: center;
+}
+.qualities .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.qualities .box-container .box{
     
+    width: 30rem;
+    margin: 1.5rem;
+}
+.qualities .box-container .box i{
+    color: #002092;
+    font-size: 4rem;
+    padding: 1rem;    
+}
+.qualities .box-container .box h2{
+    font-size: 3rem;
+}
+.qualities .box-container .box p{
+    font-size: 1.5rem;
+} 
+.contact{
+    
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row form{
+    flex: 1 1 50rem;
+    background: #e6f5ff;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    align-items: flex-start;
+}
+.contact .row form .box{
+    height: 5rem;
+    width: 49%;
+    border: .1rem solid #0575e6;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: #002092;
+    background: none;
+    text-transform: none;
+}
+.contact .row form .box:focus{
+    border-color: #002092;
+    background: #fff;
+}
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+.contact .row form .address{
+    height: 15rem;
+    padding: 1rem;
+    resize: none;
+    width: 100%;
+}
+.footer{
+    background: #666;
+}
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer .box-container .box{
+    margin: 1.5rem;
+    text-align: center;
+    flex: 1 1 25rem;
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color: #b6dbff;
+    padding: 1rem 0;
+}
+.footer .box-container .box p{
+    font-size: 1.8rem;
+    color: #fff;
+    padding:.7rem 0;
+}
+.footer .box-container .box p i{
+    padding-right:.5rem;
+    color: #b6dbff;
+}
+.footer .box-container .box a{
+    font-size: 1.8rem;
+    display: block;
+    padding: .5rem 0;
+    color: #fff;
+    text-decoration: none;
+}
+.footer .box-container .box a:hover{
+    color: #b6dbff;
 }
